@@ -12,7 +12,7 @@
 #import <string.h>
 #import <stdlib.h>
 
-uint64_t *get_function_starts(const char *imagePath) {
+struct FunctionStartsResult get_function_starts(const char *imagePath) {
     uint64_t* list = malloc(sizeof(uint64_t) * INITIAL_CAPACITY);
 
     int capacity = INITIAL_CAPACITY;
@@ -113,5 +113,8 @@ uint64_t *get_function_starts(const char *imagePath) {
             load_cmd = (const void *)((const char *)load_cmd) + load_cmd->cmdsize;
         }
     }
-    return list;
+    
+    struct FunctionStartsResult result = { list, counter };
+    
+    return result;
 }

@@ -20,6 +20,7 @@
 		F43E3BED2A5662DF006A711F /* CrashVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E3BEC2A5662DF006A711F /* CrashVerifier.swift */; };
 		F43E3BF02A56637A006A711F /* CrashParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E3BEF2A56637A006A711F /* CrashParser.swift */; };
 		F43E3BF22A566931006A711F /* ResultWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E3BF12A566931006A711F /* ResultWriter.swift */; };
+		F43E3BF42A5707F0006A711F /* Libraries.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E3BF32A5707F0006A711F /* Libraries.swift */; };
 		F454D40E2A4F75C1003F2872 /* ETSymbolicationAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454D40D2A4F75C1003F2872 /* ETSymbolicationAppApp.swift */; };
 		F454D4102A4F75C1003F2872 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454D40F2A4F75C1003F2872 /* ContentView.swift */; };
 		F454D4122A4F75C2003F2872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F454D4112A4F75C2003F2872 /* Assets.xcassets */; };
@@ -92,6 +93,7 @@
 		F43E3BEC2A5662DF006A711F /* CrashVerifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashVerifier.swift; sourceTree = "<group>"; };
 		F43E3BEF2A56637A006A711F /* CrashParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashParser.swift; sourceTree = "<group>"; };
 		F43E3BF12A566931006A711F /* ResultWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultWriter.swift; sourceTree = "<group>"; };
+		F43E3BF32A5707F0006A711F /* Libraries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libraries.swift; sourceTree = "<group>"; };
 		F454D40A2A4F75C1003F2872 /* ETSymbolicationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ETSymbolicationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F454D40D2A4F75C1003F2872 /* ETSymbolicationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETSymbolicationAppApp.swift; sourceTree = "<group>"; };
 		F454D40F2A4F75C1003F2872 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				F454D41B2A4F77D3003F2872 /* Models */,
 				F454D40D2A4F75C1003F2872 /* ETSymbolicationAppApp.swift */,
 				F454D40F2A4F75C1003F2872 /* ContentView.swift */,
+				F43E3BF32A5707F0006A711F /* Libraries.swift */,
 				F454D41F2A4F786B003F2872 /* ETSymbolicationApp-Bridging-Header.h */,
 				F454D4112A4F75C2003F2872 /* Assets.xcassets */,
 				F454D4132A4F75C2003F2872 /* Preview Content */,
@@ -429,6 +432,7 @@
 				F454D40E2A4F75C1003F2872 /* ETSymbolicationAppApp.swift in Sources */,
 				F454D41D2A4F77E0003F2872 /* Library.swift in Sources */,
 				F454D42A2A4F79EA003F2872 /* EMGCrasher.swift in Sources */,
+				F43E3BF42A5707F0006A711F /* Libraries.swift in Sources */,
 				F454D42D2A4F81A2003F2872 /* EMGThread.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
