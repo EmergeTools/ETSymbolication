@@ -9,6 +9,11 @@
 #define FunctionStarts_h
 
 #include <stdio.h>
-extern uint64_t *get_function_starts(const char *imagePath);
+struct FunctionStartsResult {
+    uint64_t *functionsPointers;
+    int functionsCount;
+};
+
+extern struct FunctionStartsResult get_function_starts(const char *imagePath);
 
 #endif /* FunctionStarts_h */
