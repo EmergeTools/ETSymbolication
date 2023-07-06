@@ -55,3 +55,62 @@ If the required Binary has not been extracted yet:
 <center>
     <img src=".github/images/symbols_done.jpeg" width="300"/>
 </center>
+
+## Building Symbols from Crashes
+
+1. Go to [AppStoreConnect](https://appstoreconnect.apple.com/).
+2. Login with your dev account.
+3. Go to your App -> TestFlight -> Crashes.
+4. Wait until you see all your crashes and see an button "Open in Xcode" when you hover over the crash (otherwise it will not be ready yet).
+
+<center>
+    <img src=".github/images/open_in_xcode.png" width="600"/>
+</center>
+
+5. Press over the crash (but not "Open in Xcode") and download the crash to yor computer using the download button on the top right corner.
+
+<center>
+    <img src=".github/images/download_crash.png" width="400"/>
+</center>
+
+6. Repeat for all the crashes.
+7. Unzip the downloaded files and place the `*.crash` files inside a new folder.
+8. Execute `SymbolsBuilder` binary with the following parameters:
+    - **--input:** path to the folder containing the crashes.
+    - **--output:** path to the folder that will have the symbols file.
+    - **--library-name:** name of the Framework.
+    - **--library-linker-address:** Framework's linker address (it depends on the device and OS). See next section to see how to get it.
+
+## How to get Framework linker address
+
+1. Download your device IPSW: [https://ipsw.me](https://ipsw.me).
+2. Install [ipsw](brew install blacktop/tap/ipsw) tool.
+    - `brew install blacktop/tap/ipsw`
+3. Extract the shared cache from the IPSW.
+    - `ipsw extract --dyld PATH_TO_IPSW`
+4. Install [DyldExtractor](https://github.com/arandomdev/DyldExtractor).
+    - `python3 -m pip install dyldextractor`
+5. Extract your framework.
+    - `dyldex -e /System/Library/Frameworks/YOUR_FRAMEWORK.framework/YOUR_FRAMEWORK ./PATH_TO_EXTRACTED_IPSW/dyld_shared_cache_arm64e`
+    - Replace YOUR_FRAMEWORK with your framework name
+    - The extracted binaries will be located inside a new folder called `binaries/System/Library/Frameworks/YOUR_FRAMEWORK.framework/`.
+7. Print the binary load commands
+    - `otool -l binaries/System/Library/Frameworks/YOUR_FRAMEWORK.framework/YOUR_FRAMEWORK | grep LC_SEGMENT -A8`
+    - Look for the section with `segname __TEXT` and the `vmaddr` value will be the linker address.
+
+Example for MetalPerformanceShadersGraph:
+```
+otool -l binaries/System/Library/Frameworks/MetalPerformanceShadersGraph.framework/MetalPerformanceShadersGraph | grep LC_SEGMENT -A8
+
+Output:
+      cmd LC_SEGMENT_64
+  cmdsize 1112
+  segname __TEXT
+   vmaddr 0x00000001800fc000
+   vmsize 0x0000000000c5c000
+  fileoff 0
+ filesize 12959744
+  maxprot 0x00000005
+ initprot 0x00000005
+ ```
+The linker adddress is `0x00000001800fc000`
