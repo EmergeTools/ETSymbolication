@@ -9,6 +9,7 @@
 #import "Constants.h"
 #import <pthread.h>
 #import <pthread/stack_np.h>
+#import <ETSymbolicationConstants/ETSymbolicationConstants-Swift.h>
 
 #define    INSTACK(a)    ((a) >= stackbot && (a) <= stacktop)
 #define    ISALIGNED(a)    ((((uintptr_t)(a)) & 0x1) == 0)
@@ -68,7 +69,7 @@ struct frame_data {
         struct frame_data *frameModifier = (struct frame_data *)frame;
         
         // Add +2 so address is AFTER the function start
-        frameModifier->ret_addr = self.addresses[self.startingIndex + counter++] + 2;
+        frameModifier->ret_addr = self.addresses[self.startingIndex + counter++] + [ETSymbolicationConstants addressOffset];
         
         if(!INSTACK(next) || !ISALIGNED(next) || next <= frame)
             return;
