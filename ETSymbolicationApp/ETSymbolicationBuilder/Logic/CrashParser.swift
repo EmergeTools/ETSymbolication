@@ -35,7 +35,7 @@ struct CrashParser {
             var version: String? = nil
             // Check Crash Report OS version
             while let line = streamReader.nextLine() {
-                let regex = /OS Version:( )+(iPhone OS|iOS) (\d{2}).(\d).(\d)? \((?<version>[\dA-Z]+)\)/
+                let regex = /OS Version:( )+(iPhone OS|iOS) (\d{2})\.(\d)(.\d)? \((?<version>[\da-zA-Z]+)\)/
                 if let match = line.firstMatch(of: regex) {
                     version = String(describing: match.version)
                     break
