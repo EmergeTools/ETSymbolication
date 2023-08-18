@@ -45,7 +45,7 @@ struct ResultWriter {
                 continue
             }
             
-            let string = String(format: "\(libraryPath),[0x%016llX,0x%016llX),\(symbol),\(version)\n", address, nextAddress)
+            let string = String(format: "\(libraryPath),\"[0x%016llX,0x%016llX)\",\"\(symbol)\",\(version)\n", address, nextAddress)
             let data = string.data(using: .ascii)!
             handle.write(data)
         }
