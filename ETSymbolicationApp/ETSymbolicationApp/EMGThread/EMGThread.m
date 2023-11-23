@@ -9,7 +9,6 @@
 #import "Constants.h"
 #import <pthread.h>
 #import <pthread/stack_np.h>
-#import <ETSymbolicationConstants/ETSymbolicationConstants-Swift.h>
 
 #define    INSTACK(a)    ((a) >= stackbot && (a) <= stacktop)
 #define    ISALIGNED(a)    ((((uintptr_t)(a)) & 0x1) == 0)

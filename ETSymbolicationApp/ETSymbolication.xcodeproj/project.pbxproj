@@ -15,6 +15,10 @@
 		F43E3BF02A56637A006A711F /* CrashParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E3BEF2A56637A006A711F /* CrashParser.swift */; };
 		F43E3BF22A566931006A711F /* ResultWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E3BF12A566931006A711F /* ResultWriter.swift */; };
 		F43E3BF42A5707F0006A711F /* Libraries.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E3BF32A5707F0006A711F /* Libraries.swift */; };
+		F449DBFC2B0FCE6F00853DEF /* ETSymbolication.swift in Sources */ = {isa = PBXBuildFile; fileRef = F449DBFB2B0FCE6F00853DEF /* ETSymbolication.swift */; };
+		F449DC012B0FCE7800853DEF /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = F449DC002B0FCE7800853DEF /* ArgumentParser */; };
+		F449DC022B0FD1D600853DEF /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E3BCE2A561D92006A711F /* StreamReader.swift */; };
+		F449DC042B0FD1FD00853DEF /* Symbolicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F449DC032B0FD1FD00853DEF /* Symbolicator.swift */; };
 		F454D40E2A4F75C1003F2872 /* ETSymbolicationAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454D40D2A4F75C1003F2872 /* ETSymbolicationAppApp.swift */; };
 		F454D4102A4F75C1003F2872 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454D40F2A4F75C1003F2872 /* ContentView.swift */; };
 		F454D4122A4F75C2003F2872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F454D4112A4F75C2003F2872 /* Assets.xcassets */; };
@@ -55,6 +59,15 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F449DBF72B0FCE6F00853DEF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +80,9 @@
 		F43E3BF12A566931006A711F /* ResultWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultWriter.swift; sourceTree = "<group>"; };
 		F43E3BF32A5707F0006A711F /* Libraries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libraries.swift; sourceTree = "<group>"; };
 		F449DBF42B0EE58F00853DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F449DBF92B0FCE6F00853DEF /* ETSymbolication */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ETSymbolication; sourceTree = BUILT_PRODUCTS_DIR; };
+		F449DBFB2B0FCE6F00853DEF /* ETSymbolication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETSymbolication.swift; sourceTree = "<group>"; };
+		F449DC032B0FD1FD00853DEF /* Symbolicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbolicator.swift; sourceTree = "<group>"; };
 		F454D40A2A4F75C1003F2872 /* ETSymbolicationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ETSymbolicationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F454D40D2A4F75C1003F2872 /* ETSymbolicationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETSymbolicationAppApp.swift; sourceTree = "<group>"; };
 		F454D40F2A4F75C1003F2872 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +104,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F43E3BCD2A560EA3006A711F /* ArgumentParser in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F449DBF62B0FCE6F00853DEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F449DC012B0FCE7800853DEF /* ArgumentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,11 +161,21 @@
 			path = Logic;
 			sourceTree = "<group>";
 		};
+		F449DBFA2B0FCE6F00853DEF /* ETSymbolication */ = {
+			isa = PBXGroup;
+			children = (
+				F449DBFB2B0FCE6F00853DEF /* ETSymbolication.swift */,
+				F449DC032B0FD1FD00853DEF /* Symbolicator.swift */,
+			);
+			path = ETSymbolication;
+			sourceTree = "<group>";
+		};
 		F454D4012A4F75C1003F2872 = {
 			isa = PBXGroup;
 			children = (
 				F454D40C2A4F75C1003F2872 /* ETSymbolicationApp */,
 				F43E3BC52A560E81006A711F /* ETSymbolicationBuilder */,
+				F449DBFA2B0FCE6F00853DEF /* ETSymbolication */,
 				F454D40B2A4F75C1003F2872 /* Products */,
 				F43E3BE32A565FF6006A711F /* Frameworks */,
 			);
@@ -152,6 +186,7 @@
 			children = (
 				F454D40A2A4F75C1003F2872 /* ETSymbolicationApp.app */,
 				F43E3BC42A560E81006A711F /* ETSymbolicationBuilder */,
+				F449DBF92B0FCE6F00853DEF /* ETSymbolication */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,6 +276,26 @@
 			productReference = F43E3BC42A560E81006A711F /* ETSymbolicationBuilder */;
 			productType = "com.apple.product-type.tool";
 		};
+		F449DBF82B0FCE6F00853DEF /* ETSymbolication */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F449DBFD2B0FCE6F00853DEF /* Build configuration list for PBXNativeTarget "ETSymbolication" */;
+			buildPhases = (
+				F449DBF52B0FCE6F00853DEF /* Sources */,
+				F449DBF62B0FCE6F00853DEF /* Frameworks */,
+				F449DBF72B0FCE6F00853DEF /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ETSymbolication;
+			packageProductDependencies = (
+				F449DC002B0FCE7800853DEF /* ArgumentParser */,
+			);
+			productName = ETSymbolication;
+			productReference = F449DBF92B0FCE6F00853DEF /* ETSymbolication */;
+			productType = "com.apple.product-type.tool";
+		};
 		F454D4092A4F75C1003F2872 /* ETSymbolicationApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F454D4182A4F75C2003F2872 /* Build configuration list for PBXNativeTarget "ETSymbolicationApp" */;
@@ -266,11 +321,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					F43E3BC32A560E81006A711F = {
 						CreatedOnToolsVersion = 14.3.1;
+					};
+					F449DBF82B0FCE6F00853DEF = {
+						CreatedOnToolsVersion = 15.0.1;
 					};
 					F454D4092A4F75C1003F2872 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -296,6 +354,7 @@
 			targets = (
 				F454D4092A4F75C1003F2872 /* ETSymbolicationApp */,
 				F43E3BC32A560E81006A711F /* ETSymbolicationBuilder */,
+				F449DBF82B0FCE6F00853DEF /* ETSymbolication */,
 			);
 		};
 /* End PBXProject section */
@@ -323,6 +382,16 @@
 				F43E3BC72A560E81006A711F /* ETSymbolicationBuilder.swift in Sources */,
 				F43E3BED2A5662DF006A711F /* CrashVerifier.swift in Sources */,
 				F43E3BF22A566931006A711F /* ResultWriter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F449DBF52B0FCE6F00853DEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F449DC022B0FD1D600853DEF /* StreamReader.swift in Sources */,
+				F449DC042B0FD1FD00853DEF /* Symbolicator.swift in Sources */,
+				F449DBFC2B0FCE6F00853DEF /* ETSymbolication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +432,41 @@
 				DEVELOPMENT_TEAM = 62J2XHNK9T;
 				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F449DBFE2B0FCE6F00853DEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62J2XHNK9T;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F449DBFF2B0FCE6F00853DEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62J2XHNK9T;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -564,6 +668,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		F449DBFD2B0FCE6F00853DEF /* Build configuration list for PBXNativeTarget "ETSymbolication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F449DBFE2B0FCE6F00853DEF /* Debug */,
+				F449DBFF2B0FCE6F00853DEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F454D4052A4F75C1003F2872 /* Build configuration list for PBXProject "ETSymbolication" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -597,6 +710,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		F43E3BCC2A560EA3006A711F /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F43E3BCB2A560EA3006A711F /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+		F449DC002B0FCE7800853DEF /* ArgumentParser */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F43E3BCB2A560EA3006A711F /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
 			productName = ArgumentParser;
