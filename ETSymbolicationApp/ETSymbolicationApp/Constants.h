@@ -9,7 +9,7 @@
 #define Constants_h
 
 // Too many frames makes crash reporting slow
-#define MAX_FRAMES 500
+#define MAX_FRAMES 400
 #define INITIAL_CAPACITY 10
 
 #endif /* Constants_h */
