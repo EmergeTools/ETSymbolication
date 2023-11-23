@@ -52,7 +52,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "--input /Users/itaybrenner/emerge/CrashesFolder"
+            argument = "--input ~/Downloads/crashes_17.1.1_SE"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
@@ -60,7 +60,7 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-a 000000018a8b3000"
+            argument = "-a 000000018b9ec000"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
