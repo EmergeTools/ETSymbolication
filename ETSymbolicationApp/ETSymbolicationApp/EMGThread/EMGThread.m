@@ -69,7 +69,7 @@ struct frame_data {
         struct frame_data *frameModifier = (struct frame_data *)frame;
         
         // Add +2 so address is AFTER the function start
-        frameModifier->ret_addr = self.addresses[self.startingIndex + counter++] + [ETSymbolicationConstants addressOffset];
+        frameModifier->ret_addr = self.addresses[self.startingIndex + counter++];
         
         if(!INSTACK(next) || !ISALIGNED(next) || next <= frame)
             return;
