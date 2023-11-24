@@ -113,6 +113,19 @@ struct FunctionStartsResult get_function_starts(const char *imagePath) {
             load_cmd = (const void *)((const char *)load_cmd) + load_cmd->cmdsize;
         }
     }
+  
+    // Fix first and last offsets
+    if (counter == capacity) {
+      for (int i = 0; i < counter-1; i++) {
+        list[i] = list[i+1];
+      }
+      list[counter] = list[counter-1] + 2;
+    } else {
+      // Add one more to the end
+      list[counter] = list[counter-1] + 2;
+      // Ignore first address (because we cant use the offset anymore)
+      list = list + 1;
+    }
     
     struct FunctionStartsResult result = { list, counter };
     

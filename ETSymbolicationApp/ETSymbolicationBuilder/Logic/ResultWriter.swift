@@ -50,6 +50,7 @@ struct ResultWriter {
             handle.write(data)
         }
         print("Remember to manually fix last address (0xFFFFFFFFFFFFFFFF) in the CSV")
+        print("You can use `symbols -onlyFuncStartsData -arch arm64e \(library) | grep \"__TEXT __text\"` to find the last address of the text segment (sum both initial address + length)")
     }
     
     private static func writeAsTxt(_ handle: FileHandle, _ symbols: [UInt64: String]) {

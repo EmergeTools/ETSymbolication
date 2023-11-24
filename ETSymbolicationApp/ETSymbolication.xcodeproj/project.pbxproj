@@ -10,17 +10,15 @@
 		F43E3BC72A560E81006A711F /* ETSymbolicationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E3BC62A560E81006A711F /* ETSymbolicationBuilder.swift */; };
 		F43E3BCD2A560EA3006A711F /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = F43E3BCC2A560EA3006A711F /* ArgumentParser */; };
 		F43E3BCF2A561D92006A711F /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E3BCE2A561D92006A711F /* StreamReader.swift */; };
-		F43E3BD82A565F98006A711F /* ETSymbolicationConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = F43E3BD72A565F98006A711F /* ETSymbolicationConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F43E3BDB2A565F98006A711F /* ETSymbolicationConstants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43E3BD52A565F98006A711F /* ETSymbolicationConstants.framework */; };
-		F43E3BDC2A565F98006A711F /* ETSymbolicationConstants.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F43E3BD52A565F98006A711F /* ETSymbolicationConstants.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F43E3BE22A565FA4006A711F /* ETSymbolicationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E3BE12A565FA4006A711F /* ETSymbolicationConstants.swift */; };
-		F43E3BE42A565FF6006A711F /* ETSymbolicationConstants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43E3BD52A565F98006A711F /* ETSymbolicationConstants.framework */; };
-		F43E3BE52A565FF6006A711F /* ETSymbolicationConstants.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F43E3BD52A565F98006A711F /* ETSymbolicationConstants.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F43E3BEB2A5661B4006A711F /* ParseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E3BEA2A5661B4006A711F /* ParseResult.swift */; };
 		F43E3BED2A5662DF006A711F /* CrashVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E3BEC2A5662DF006A711F /* CrashVerifier.swift */; };
 		F43E3BF02A56637A006A711F /* CrashParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E3BEF2A56637A006A711F /* CrashParser.swift */; };
 		F43E3BF22A566931006A711F /* ResultWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E3BF12A566931006A711F /* ResultWriter.swift */; };
 		F43E3BF42A5707F0006A711F /* Libraries.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E3BF32A5707F0006A711F /* Libraries.swift */; };
+		F449DBFC2B0FCE6F00853DEF /* ETSymbolication.swift in Sources */ = {isa = PBXBuildFile; fileRef = F449DBFB2B0FCE6F00853DEF /* ETSymbolication.swift */; };
+		F449DC012B0FCE7800853DEF /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = F449DC002B0FCE7800853DEF /* ArgumentParser */; };
+		F449DC022B0FD1D600853DEF /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E3BCE2A561D92006A711F /* StreamReader.swift */; };
+		F449DC042B0FD1FD00853DEF /* Symbolicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F449DC032B0FD1FD00853DEF /* Symbolicator.swift */; };
 		F454D40E2A4F75C1003F2872 /* ETSymbolicationAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454D40D2A4F75C1003F2872 /* ETSymbolicationAppApp.swift */; };
 		F454D4102A4F75C1003F2872 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454D40F2A4F75C1003F2872 /* ContentView.swift */; };
 		F454D4122A4F75C2003F2872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F454D4112A4F75C2003F2872 /* Assets.xcassets */; };
@@ -30,23 +28,6 @@
 		F454D42A2A4F79EA003F2872 /* EMGCrasher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454D4292A4F79EA003F2872 /* EMGCrasher.swift */; };
 		F454D42D2A4F81A2003F2872 /* EMGThread.m in Sources */ = {isa = PBXBuildFile; fileRef = F454D42C2A4F81A2003F2872 /* EMGThread.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		F43E3BD92A565F98006A711F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F454D4022A4F75C1003F2872 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F43E3BD42A565F98006A711F;
-			remoteInfo = ETSymbolicationConstants;
-		};
-		F43E3BE62A565FF6006A711F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F454D4022A4F75C1003F2872 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F43E3BD42A565F98006A711F;
-			remoteInfo = ETSymbolicationConstants;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		F43E3BC22A560E81006A711F /* CopyFiles */ = {
@@ -64,7 +45,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F43E3BDC2A565F98006A711F /* ETSymbolicationConstants.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,10 +55,18 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F43E3BE52A565FF6006A711F /* ETSymbolicationConstants.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F449DBF72B0FCE6F00853DEF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -86,14 +74,15 @@
 		F43E3BC42A560E81006A711F /* ETSymbolicationBuilder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ETSymbolicationBuilder; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43E3BC62A560E81006A711F /* ETSymbolicationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETSymbolicationBuilder.swift; sourceTree = "<group>"; };
 		F43E3BCE2A561D92006A711F /* StreamReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamReader.swift; sourceTree = "<group>"; };
-		F43E3BD52A565F98006A711F /* ETSymbolicationConstants.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ETSymbolicationConstants.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F43E3BD72A565F98006A711F /* ETSymbolicationConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETSymbolicationConstants.h; sourceTree = "<group>"; };
-		F43E3BE12A565FA4006A711F /* ETSymbolicationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETSymbolicationConstants.swift; sourceTree = "<group>"; };
 		F43E3BEA2A5661B4006A711F /* ParseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseResult.swift; sourceTree = "<group>"; };
 		F43E3BEC2A5662DF006A711F /* CrashVerifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashVerifier.swift; sourceTree = "<group>"; };
 		F43E3BEF2A56637A006A711F /* CrashParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashParser.swift; sourceTree = "<group>"; };
 		F43E3BF12A566931006A711F /* ResultWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultWriter.swift; sourceTree = "<group>"; };
 		F43E3BF32A5707F0006A711F /* Libraries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libraries.swift; sourceTree = "<group>"; };
+		F449DBF42B0EE58F00853DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F449DBF92B0FCE6F00853DEF /* ETSymbolication */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ETSymbolication; sourceTree = BUILT_PRODUCTS_DIR; };
+		F449DBFB2B0FCE6F00853DEF /* ETSymbolication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETSymbolication.swift; sourceTree = "<group>"; };
+		F449DC032B0FD1FD00853DEF /* Symbolicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbolicator.swift; sourceTree = "<group>"; };
 		F454D40A2A4F75C1003F2872 /* ETSymbolicationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ETSymbolicationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F454D40D2A4F75C1003F2872 /* ETSymbolicationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETSymbolicationAppApp.swift; sourceTree = "<group>"; };
 		F454D40F2A4F75C1003F2872 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -115,14 +104,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F43E3BCD2A560EA3006A711F /* ArgumentParser in Frameworks */,
-				F43E3BE42A565FF6006A711F /* ETSymbolicationConstants.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F43E3BD22A565F98006A711F /* Frameworks */ = {
+		F449DBF62B0FCE6F00853DEF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F449DC012B0FCE7800853DEF /* ArgumentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +119,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F43E3BDB2A565F98006A711F /* ETSymbolicationConstants.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,15 +134,6 @@
 				F43E3BCE2A561D92006A711F /* StreamReader.swift */,
 			);
 			path = ETSymbolicationBuilder;
-			sourceTree = "<group>";
-		};
-		F43E3BD62A565F98006A711F /* ETSymbolicationConstants */ = {
-			isa = PBXGroup;
-			children = (
-				F43E3BD72A565F98006A711F /* ETSymbolicationConstants.h */,
-				F43E3BE12A565FA4006A711F /* ETSymbolicationConstants.swift */,
-			);
-			path = ETSymbolicationConstants;
 			sourceTree = "<group>";
 		};
 		F43E3BE32A565FF6006A711F /* Frameworks */ = {
@@ -182,12 +161,21 @@
 			path = Logic;
 			sourceTree = "<group>";
 		};
+		F449DBFA2B0FCE6F00853DEF /* ETSymbolication */ = {
+			isa = PBXGroup;
+			children = (
+				F449DBFB2B0FCE6F00853DEF /* ETSymbolication.swift */,
+				F449DC032B0FD1FD00853DEF /* Symbolicator.swift */,
+			);
+			path = ETSymbolication;
+			sourceTree = "<group>";
+		};
 		F454D4012A4F75C1003F2872 = {
 			isa = PBXGroup;
 			children = (
 				F454D40C2A4F75C1003F2872 /* ETSymbolicationApp */,
 				F43E3BC52A560E81006A711F /* ETSymbolicationBuilder */,
-				F43E3BD62A565F98006A711F /* ETSymbolicationConstants */,
+				F449DBFA2B0FCE6F00853DEF /* ETSymbolication */,
 				F454D40B2A4F75C1003F2872 /* Products */,
 				F43E3BE32A565FF6006A711F /* Frameworks */,
 			);
@@ -198,7 +186,7 @@
 			children = (
 				F454D40A2A4F75C1003F2872 /* ETSymbolicationApp.app */,
 				F43E3BC42A560E81006A711F /* ETSymbolicationBuilder */,
-				F43E3BD52A565F98006A711F /* ETSymbolicationConstants.framework */,
+				F449DBF92B0FCE6F00853DEF /* ETSymbolication */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,6 +194,7 @@
 		F454D40C2A4F75C1003F2872 /* ETSymbolicationApp */ = {
 			isa = PBXGroup;
 			children = (
+				F449DBF42B0EE58F00853DEF /* Info.plist */,
 				F454D42E2A4F85A8003F2872 /* Constants.h */,
 				F454D4282A4F7958003F2872 /* EMGCrasher */,
 				F454D4272A4F7949003F2872 /* EMGThread */,
@@ -265,17 +254,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		F43E3BD02A565F98006A711F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F43E3BD82A565F98006A711F /* ETSymbolicationConstants.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		F43E3BC32A560E81006A711F /* ETSymbolicationBuilder */ = {
 			isa = PBXNativeTarget;
@@ -289,7 +267,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				F43E3BE72A565FF6006A711F /* PBXTargetDependency */,
 			);
 			name = ETSymbolicationBuilder;
 			packageProductDependencies = (
@@ -299,23 +276,25 @@
 			productReference = F43E3BC42A560E81006A711F /* ETSymbolicationBuilder */;
 			productType = "com.apple.product-type.tool";
 		};
-		F43E3BD42A565F98006A711F /* ETSymbolicationConstants */ = {
+		F449DBF82B0FCE6F00853DEF /* ETSymbolication */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F43E3BDD2A565F98006A711F /* Build configuration list for PBXNativeTarget "ETSymbolicationConstants" */;
+			buildConfigurationList = F449DBFD2B0FCE6F00853DEF /* Build configuration list for PBXNativeTarget "ETSymbolication" */;
 			buildPhases = (
-				F43E3BD02A565F98006A711F /* Headers */,
-				F43E3BD12A565F98006A711F /* Sources */,
-				F43E3BD22A565F98006A711F /* Frameworks */,
-				F43E3BD32A565F98006A711F /* Resources */,
+				F449DBF52B0FCE6F00853DEF /* Sources */,
+				F449DBF62B0FCE6F00853DEF /* Frameworks */,
+				F449DBF72B0FCE6F00853DEF /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ETSymbolicationConstants;
-			productName = ETSymbolicationConstants;
-			productReference = F43E3BD52A565F98006A711F /* ETSymbolicationConstants.framework */;
-			productType = "com.apple.product-type.framework";
+			name = ETSymbolication;
+			packageProductDependencies = (
+				F449DC002B0FCE7800853DEF /* ArgumentParser */,
+			);
+			productName = ETSymbolication;
+			productReference = F449DBF92B0FCE6F00853DEF /* ETSymbolication */;
+			productType = "com.apple.product-type.tool";
 		};
 		F454D4092A4F75C1003F2872 /* ETSymbolicationApp */ = {
 			isa = PBXNativeTarget;
@@ -329,7 +308,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				F43E3BDA2A565F98006A711F /* PBXTargetDependency */,
 			);
 			name = ETSymbolicationApp;
 			productName = ETSymbolicationApp;
@@ -343,15 +321,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					F43E3BC32A560E81006A711F = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
-					F43E3BD42A565F98006A711F = {
-						CreatedOnToolsVersion = 14.3.1;
-						LastSwiftMigration = 1430;
+					F449DBF82B0FCE6F00853DEF = {
+						CreatedOnToolsVersion = 15.0.1;
 					};
 					F454D4092A4F75C1003F2872 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -377,19 +354,12 @@
 			targets = (
 				F454D4092A4F75C1003F2872 /* ETSymbolicationApp */,
 				F43E3BC32A560E81006A711F /* ETSymbolicationBuilder */,
-				F43E3BD42A565F98006A711F /* ETSymbolicationConstants */,
+				F449DBF82B0FCE6F00853DEF /* ETSymbolication */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F43E3BD32A565F98006A711F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F454D4082A4F75C1003F2872 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -415,11 +385,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F43E3BD12A565F98006A711F /* Sources */ = {
+		F449DBF52B0FCE6F00853DEF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F43E3BE22A565FA4006A711F /* ETSymbolicationConstants.swift in Sources */,
+				F449DC022B0FD1D600853DEF /* StreamReader.swift in Sources */,
+				F449DC042B0FD1FD00853DEF /* Symbolicator.swift in Sources */,
+				F449DBFC2B0FCE6F00853DEF /* ETSymbolication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,19 +410,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F43E3BDA2A565F98006A711F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F43E3BD42A565F98006A711F /* ETSymbolicationConstants */;
-			targetProxy = F43E3BD92A565F98006A711F /* PBXContainerItemProxy */;
-		};
-		F43E3BE72A565FF6006A711F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F43E3BD42A565F98006A711F /* ETSymbolicationConstants */;
-			targetProxy = F43E3BE62A565FF6006A711F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F43E3BC82A560E81006A711F /* Debug */ = {
@@ -479,86 +438,38 @@
 			};
 			name = Release;
 		};
-		F43E3BDE2A565F98006A711F /* Debug */ = {
+		F449DBFE2B0FCE6F00853DEF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 62J2XHNK9T;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
-				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emerge.ETSymbolicationConstants;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = auto;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		F43E3BDF2A565F98006A711F /* Release */ = {
+		F449DBFF2B0FCE6F00853DEF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 62J2XHNK9T;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
-				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.emerge.ETSymbolicationConstants;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = auto;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -684,11 +595,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 38;
 				DEVELOPMENT_ASSET_PATHS = "\"ETSymbolicationApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 62J2XHNK9T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ETSymbolicationApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -699,8 +611,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.emerge.ETSymbolicationApp;
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emerge.testapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "ETSymbolicationApp/ETSymbolicationApp-Bridging-Header.h";
@@ -718,11 +630,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 38;
 				DEVELOPMENT_ASSET_PATHS = "\"ETSymbolicationApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 62J2XHNK9T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ETSymbolicationApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -733,8 +646,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.emerge.ETSymbolicationApp;
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emerge.testapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "ETSymbolicationApp/ETSymbolicationApp-Bridging-Header.h";
@@ -755,11 +668,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F43E3BDD2A565F98006A711F /* Build configuration list for PBXNativeTarget "ETSymbolicationConstants" */ = {
+		F449DBFD2B0FCE6F00853DEF /* Build configuration list for PBXNativeTarget "ETSymbolication" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F43E3BDE2A565F98006A711F /* Debug */,
-				F43E3BDF2A565F98006A711F /* Release */,
+				F449DBFE2B0FCE6F00853DEF /* Debug */,
+				F449DBFF2B0FCE6F00853DEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -797,6 +710,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		F43E3BCC2A560EA3006A711F /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F43E3BCB2A560EA3006A711F /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+		F449DC002B0FCE7800853DEF /* ArgumentParser */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F43E3BCB2A560EA3006A711F /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
 			productName = ArgumentParser;

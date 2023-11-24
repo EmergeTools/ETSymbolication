@@ -40,6 +40,7 @@ struct ETSymbolicationBuilder: ParsableCommand {
         let parseResult = try CrashParser.parse(crashes,
                                                 library: libraryName,
                                                 linkerAddress: linkerAddress)
+        print("Writing results to: \(outputFullPath)")
         try ResultWriter.write(outputFullPath, libraryName, parseResult, csv)
     }
 }
