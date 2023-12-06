@@ -114,3 +114,27 @@ Output:
  initprot 0x00000005
  ```
 The linker adddress is `0x00000001800fc000`
+
+## Available Symbols
+
+You will fin available symbols inside the `Symbols` folder. Each folder inside represents a different device, for example `iPhone 12,8` represents symbols for the iPhone SE 2nd gen.
+
+<details>
+<summary><b><font size="+1">iPhone SE 2nd Gen (iPhone 12,8)</font></b></summary>
+<table>
+  <tr>
+    <th>Framework</th>
+    <th style="text-align: center;">iOS 16.5 (20F66)</th> 
+    <th style="text-align: center;">iOS 16.5.1 (20F75)</th>
+    <th style="text-align: center;">iOS 17.0 Beta 6 (21A5312c)</th>
+    <th style="text-align: center;">iOS 17.1.1 (21B91)</th>
+  </tr>
+  <tr>
+    <td>SwiftUI</td>
+    <td style="text-align: center;"><center>✅</center></td>
+    <td style="text-align: center;"><center>✅</center></td>
+    <td style="text-align: center;"><center>✅</center></td>
+    <td style="text-align: center;"><center>✅</center></td>
+  </tr>
+</table>
+</details>
