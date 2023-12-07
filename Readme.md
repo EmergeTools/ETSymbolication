@@ -123,18 +123,24 @@ You will fin available symbols inside the `Symbols` folder. Each folder inside r
 <summary><b><font size="+1">iPhone SE 2nd Gen (iPhone 12,8)</font></b></summary>
 <table>
   <tr>
-    <th>Framework</th>
-    <th style="text-align: center;">iOS 16.5 (20F66)</th> 
-    <th style="text-align: center;">iOS 16.5.1 (20F75)</th>
-    <th style="text-align: center;">iOS 17.0 Beta 6 (21A5312c)</th>
-    <th style="text-align: center;">iOS 17.1.1 (21B91)</th>
+    <th>OS Version</th>
+    <th style="text-align: center;">SwiftUI</th> 
   </tr>
   <tr>
-    <td>SwiftUI</td>
+    <td>iOS 16.5 (20F66)</td>
     <td style="text-align: center;"><center>✅</center></td>
-    <td style="text-align: center;"><center>✅</center></td>
-    <td style="text-align: center;"><center>✅</center></td>
-    <td style="text-align: center;"><center>✅</center></td>
+  </tr>
+  <tr>
+    <td>iOS 16.5.1 (20F75)</td>
+  <td style="text-align: center;"><center>✅</center></td>
+  </tr>
+  <tr>
+    <td>iOS 17.0 Beta 6 (21A5312c)</td>
+  <td style="text-align: center;"><center>✅</center></td>
+  </tr>
+  <tr>
+    <td>iOS 17.1.1 (21B91)</td>
+  <td style="text-align: center;"><center>✅</center></td>
   </tr>
 </table>
 </details>
