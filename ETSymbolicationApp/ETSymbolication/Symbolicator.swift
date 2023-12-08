@@ -18,10 +18,11 @@ class Symbolicator {
   }
 
   private func loadAddresses() {
-    let symbolsPath = "/Users/itaybrenner/Symbols/\(version).csv"
+    let fileManager = FileManager.default
+    let symbolsURL = fileManager.homeDirectoryForCurrentUser.appending(path: "/Symbols/\(version).csv")
 
-    guard let streamReader = StreamReader(path: symbolsPath) else {
-      fatalError("Failed to open the file \(symbolsPath).")
+    guard let streamReader = StreamReader(url: symbolsURL) else {
+      fatalError("Failed to open the file \(symbolsURL.path).")
     }
     defer {
       streamReader.close()
