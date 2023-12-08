@@ -30,6 +30,16 @@ struct ETSymbolicator: ParsableCommand {
   @Option(name: .shortAndLong, help: "Library to symbolicate.")
   var library: String = "SwiftUI"
   
+  func findModel(_ reader: StreamReader) -> String? {
+    while let line = reader.nextLine() {
+      let regex = /Hardware Model:( )+(?<model>(iPhone|iPad|iPod)\d{1,2},\d)/
+      if let match = line.firstMatch(of: regex) {
+        return String(describing: match.model)
+      }
+    }
+    return nil
+  }
+  
   func findVersion(_ reader: StreamReader) -> String? {
     while let line = reader.nextLine() {
       let regex = /OS Version:( )+(iPhone OS|iOS) (\d{2})\.(\d)(.\d)? \((?<version>[\da-zA-Z]+)\)/
@@ -54,6 +64,10 @@ struct ETSymbolicator: ParsableCommand {
       streamReader.close()
     }
 
+    guard let model = findModel(streamReader) else {
+      fatalError("Could not find device model in \(crashLog).")
+    }
+    
     guard let version = findVersion(streamReader) else {
       fatalError("Could not find OS version in \(crashLog).")
     }
@@ -77,7 +91,7 @@ struct ETSymbolicator: ParsableCommand {
     }
     let slide = loadAddress - linkerAddress
     
-    let symbolicator = try Symbolicator(version: version)
+    let symbolicator = try Symbolicator(version: version, model: model)
     let symbolsRegex = /(?<line>(\d+)\s+(?<library>[a-zA-Z0-9]+)( )+\t?\s*0x(?<address>[\da-f]{0,16})) (?<method>.*)/
     while let line = streamReader.nextLine() {
       if let match = line.firstMatch(of: symbolsRegex),
