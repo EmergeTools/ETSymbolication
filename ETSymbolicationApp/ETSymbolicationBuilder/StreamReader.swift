@@ -16,10 +16,19 @@ class StreamReader {
   var delimiterData: Data
   var atEOF: Bool = false
 
-  init?(
+  convenience init?(
     path: String, delimiter: String = "\n", encoding: String.Encoding = .utf8, chunkSize: Int = 4096
   ) {
-    guard let fileHandle = FileHandle(forReadingAtPath: path),
+    guard let url = URL(string: path) else {
+      return nil
+    }
+    self.init(url: url, delimiter: delimiter, encoding: encoding, chunkSize: chunkSize)
+  }
+  
+  init?(
+    url: URL, delimiter: String = "\n", encoding: String.Encoding = .utf8, chunkSize: Int = 4096
+  ) {
+    guard let fileHandle = try? FileHandle(forReadingFrom: url),
       let delimiterData = delimiter.data(using: encoding)
     else {
       return nil
