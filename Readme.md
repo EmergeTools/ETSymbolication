@@ -1,13 +1,57 @@
 # ETSymbolication
 
-ETSymbolication is a powerful tool that enables symbolicating crash reports even when the symbols are not openly distributed by Apple. It leverages Apple's crash reporting service to extract the necessary symbols and provide meaningful information for crash analysis.
+ETSymbolication is a powerful tool from [Emerge Tools](https://www.emergetools.com/) that enables symbolicating crash reports even when the symbols are not openly distributed by Apple. It leverages Apple's crash reporting service to extract the necessary symbols and provide meaningful information for crash analysis. 
+
+- ⭐️ You can use Emerge Tools' [symbolicator](https://www.emergetools.com/symbolicate) to symbolicate crash reports with symbols in this repo
+- 📚 To learn more about this repo, you can read our posts on [discovering hidden symbols](https://www.emergetools.com/blog/posts/symbolicating-swiftui-and-any-apple-framework) and [building an open-source symbolicator](https://www.emergetools.com/blog/posts/symbolicating-swiftui-and-any-apple-framework-part-2)
 
 ## Features
 - Symbolicate all crash reports
 - Utilize Apple's crash reporting service for symbol extraction
 - Simplify crash analysis and debugging process
 
-## Prerequisites
+## Supported Symbols
+
+You will find available symbols inside the `Symbols` folder. Each folder inside represents a different device, for example `iPhone 12,8` represents symbols for the iPhone SE 2nd gen.
+
+All symbols below are supported in the Emerge Tools' [symbolicator](https://www.emergetools.com/symbolicate).
+
+<details>
+<summary><b><font size="+1">iPhone SE 2nd Gen (iPhone 12,8)</font></b></summary>
+<table>
+  <tr>
+    <th>OS Version</th>
+    <th style="text-align: center;">SwiftUI</th> 
+  </tr>
+  <tr>
+    <td>iOS 16.5 (20F66)</td>
+    <td style="text-align: center;"><center>✅</center></td>
+  </tr>
+  <tr>
+    <td>iOS 16.5.1 (20F75)</td>
+  <td style="text-align: center;"><center>✅</center></td>
+  </tr>
+  <tr>
+    <td>iOS 17.0 Beta 6 (21A5312c)</td>
+  <td style="text-align: center;"><center>✅</center></td>
+  </tr>
+  <tr>
+    <td>iOS 17.1.1 (21B91)</td>
+  <td style="text-align: center;"><center>✅</center></td>
+  </tr>
+</table>
+</details>
+
+## Contributing
+
+This repo provides the tools to generate symbols for any framework. 
+
+- [Prerequisites](#prerequisites)
+- [Extracting Framework Symbols](#extracting-framework-symbols)
+- [Building Symbols from Crashes](#building-symbols-from-crashes)
+- [Getting a Framework's linker address](#getting-a-frameworks-linker-address)
+
+### Prerequisites
 
 To use ETSymbolication, ensure that you have the following prerequisites:
 
@@ -17,7 +61,7 @@ If the required Binary has not been extracted yet:
 - iOS Device on the correct version
 - An Apple Developer Account if the required Binary has not been extracted yet
 
-## Extracting Framework Symbols
+### Extracting Framework Symbols
 
 1. Open the Xcode Project (`ETSymbolication.xcodeproj`).
 2. Make sure your Framework is listed in the array inside `Libraries.swift`.
@@ -56,7 +100,7 @@ If the required Binary has not been extracted yet:
     <img src=".github/images/symbols_done.jpeg" width="300"/>
 </center>
 
-## Building Symbols from Crashes
+### Building Symbols from Crashes
 
 1. Go to [AppStoreConnect](https://appstoreconnect.apple.com/).
 2. Login with your dev account.
@@ -81,7 +125,7 @@ If the required Binary has not been extracted yet:
     - **--library-name:** name of the Framework.
     - **--library-linker-address:** Framework's linker address (it depends on the device and OS). See next section to see how to get it.
 
-## How to get Framework linker address
+### Getting a Framework's linker address
 
 1. Download your device IPSW: [https://ipsw.me](https://ipsw.me).
 2. Install [ipsw](brew install blacktop/tap/ipsw) tool.
@@ -114,33 +158,3 @@ Output:
  initprot 0x00000005
  ```
 The linker adddress is `0x00000001800fc000`
-
-## Available Symbols
-
-You will fin available symbols inside the `Symbols` folder. Each folder inside represents a different device, for example `iPhone 12,8` represents symbols for the iPhone SE 2nd gen.
-
-<details>
-<summary><b><font size="+1">iPhone SE 2nd Gen (iPhone 12,8)</font></b></summary>
-<table>
-  <tr>
-    <th>OS Version</th>
-    <th style="text-align: center;">SwiftUI</th> 
-  </tr>
-  <tr>
-    <td>iOS 16.5 (20F66)</td>
-    <td style="text-align: center;"><center>✅</center></td>
-  </tr>
-  <tr>
-    <td>iOS 16.5.1 (20F75)</td>
-  <td style="text-align: center;"><center>✅</center></td>
-  </tr>
-  <tr>
-    <td>iOS 17.0 Beta 6 (21A5312c)</td>
-  <td style="text-align: center;"><center>✅</center></td>
-  </tr>
-  <tr>
-    <td>iOS 17.1.1 (21B91)</td>
-  <td style="text-align: center;"><center>✅</center></td>
-  </tr>
-</table>
-</details>
