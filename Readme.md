@@ -1,9 +1,10 @@
 # ETSymbolication
 
-ETSymbolication is a powerful tool from [Emerge Tools](https://www.emergetools.com/) that enables symbolicating crash reports even when the symbols are not openly distributed by Apple. It leverages Apple's crash reporting service to extract the necessary symbols and provide meaningful information for crash analysis.
+ETSymbolication is a tool from [Emerge Tools](https://www.emergetools.com/) that enables symbolicating iOS crash reports with symbols from Apple's private frameworks such as SwiftUI.
 
-- ⭐️ You can use Emerge Tools' [symbolicator](https://www.emergetools.com/symbolicate) to symbolicate crash reports with symbols in this repo
-- 📚 To learn more about this repo, you can read our posts on [discovering hidden symbols](https://www.emergetools.com/blog/posts/symbolicating-swiftui-and-any-apple-framework) and [building an open-source symbolicator](https://www.emergetools.com/blog/posts/symbolicating-swiftui-and-any-apple-framework-part-2)
+⭐️ You can use the [free symbolicator](https://www.emergetools.com/symbolicate) to symbolicate crash reports with symbols in this repo
+
+📚 To learn more about this repo, you can read our posts on [discovering hidden symbols](https://www.emergetools.com/blog/posts/symbolicating-swiftui-and-any-apple-framework) and [building an open-source symbolicator](https://www.emergetools.com/blog/posts/symbolicating-swiftui-and-any-apple-framework-part-2)
 
 ## Features
 
