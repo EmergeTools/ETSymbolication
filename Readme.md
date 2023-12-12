@@ -47,7 +47,7 @@ A full list of supported symbols can be found below. All pairings with a ✅ are
 
 This repo provides the tools to generate symbols for any framework. Symbols are generated for Device x OS x Framework pairings in the `Symbols` folder.
 
-**⚠️ Refer to already [supported symbols](#supported-symbols) to make sure the symbols you're looking for aren't already generated.**
+**⚠️ Refer [supported symbols](#supported-symbols) to make sure the symbols you're looking for aren't already generated.**
 
 - [Prerequisites](#prerequisites)
 - [Extracting Framework Symbols](#extracting-framework-symbols)
