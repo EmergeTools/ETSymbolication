@@ -9,17 +9,19 @@ import Foundation
 
 class Symbolicator {
   let version: String
+  let model: String
   private var addressesToSymbols: [String: [UInt64: String]] = [:]
   private var sortedAddresses: [String: [UInt64]] = [:]
 
-  init(version: String) throws {
+  init(version: String, model: String) throws {
     self.version = version
+    self.model = model
     loadAddresses()
   }
 
   private func loadAddresses() {
     let fileManager = FileManager.default
-    let symbolsURL = fileManager.homeDirectoryForCurrentUser.appending(path: "/Symbols/\(version).csv")
+    let symbolsURL = fileManager.homeDirectoryForCurrentUser.appending(path: "Symbols/\(model)/\(version).csv")
 
     guard let streamReader = StreamReader(url: symbolsURL) else {
       fatalError("Failed to open the file \(symbolsURL.path).")
