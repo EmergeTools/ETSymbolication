@@ -61,10 +61,10 @@ To use ETSymbolication, ensure that you have the following prerequisites:
 
 - macOS
 
-If the required Binary has not been extracted yet:
+If the required Device x OS x Framework pairing has not been extracted yet:
 
 - iOS Device on the correct version
-- An Apple Developer Account if the required Binary has not been extracted yet
+- An Apple Developer Account
 
 ### Extracting Framework Symbols
 
