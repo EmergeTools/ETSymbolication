@@ -1,6 +1,6 @@
 # ETSymbolication
 
-ETSymbolication is a tool from [Emerge Tools](https://www.emergetools.com/) that enables symbolicating iOS crash reports with symbols from Apple's private frameworks such as SwiftUI.
+ETSymbolication from [Emerge Tools](https://www.emergetools.com/) enables symbolicating iOS crash reports with symbols from Apple's private frameworks like SwiftUI.
 
 ⭐️ You can use the [free symbolicator](https://www.emergetools.com/symbolicate) to symbolicate crash reports with symbols in this repo
 
@@ -18,7 +18,7 @@ ETSymbolication is a tool from [Emerge Tools](https://www.emergetools.com/) that
 
 ## Supported Symbols
 
-You will find available symbols inside the `Symbols` folder. Each folder inside represents a different device, for example `iPhone 12,8` represents symbols for the iPhone SE 2nd gen. Files in `Symbols` corresponds to a specific OS version. There **can be symbols for multiple frameworks** in a single file.
+You will find available symbols inside the `Symbols` folder. Each folder inside represents a different device. For example, `iPhone 12,8` represents symbols for the iPhone SE 2nd gen. Files in `Symbols` correspond to a specific OS version. There **can be symbols for multiple frameworks** in a single file.
 
 A full list of supported symbols can be found below. All pairings with a ✅ are supported in the Emerge Tools' [symbolicator](https://www.emergetools.com/symbolicate).
 
@@ -52,7 +52,7 @@ A full list of supported symbols can be found below. All pairings with a ✅ are
 
 This repo provides the tools to generate symbols for any framework. Symbols are generated for Device x OS x Framework pairings in the `Symbols` folder.
 
-**⚠️ Refer [supported symbols](#supported-symbols) to make sure the symbols you're looking for aren't already generated.**
+**⚠️ Refer to [supported symbols](#supported-symbols) to ensure the symbols you're looking for aren't already generated.**
 
 - [Prerequisites](#prerequisites)
 - [Extracting Framework Symbols](#extracting-framework-symbols)
