@@ -4,11 +4,11 @@ ETSymbolication is a tool from [Emerge Tools](https://www.emergetools.com/) that
 
 ⭐️ You can use the [free symbolicator](https://www.emergetools.com/symbolicate) to symbolicate crash reports with symbols in this repo
 
-📚 To learn more about this repo, you can read our posts on [discovering hidden symbols](https://www.emergetools.com/blog/posts/symbolicating-swiftui-and-any-apple-framework) and [building an open-source symbolicator](https://www.emergetools.com/blog/posts/symbolicating-swiftui-and-any-apple-framework-part-2)
+<p align="center">
+    <img src=".github/images/symbolicate.gif" width="700"/>
+</p>
 
-<center>
-    <img src=".github/images/symbolicate.gif" width="500"/>
-</center>
+📚 To learn more about this repo, you can read our posts on [discovering hidden symbols](https://www.emergetools.com/blog/posts/symbolicating-swiftui-and-any-apple-framework) and [building an open-source symbolicator](https://www.emergetools.com/blog/posts/symbolicating-swiftui-and-any-apple-framework-part-2)
 
 ## Features
 
