@@ -6,6 +6,10 @@ ETSymbolication is a tool from [Emerge Tools](https://www.emergetools.com/) that
 
 📚 To learn more about this repo, you can read our posts on [discovering hidden symbols](https://www.emergetools.com/blog/posts/symbolicating-swiftui-and-any-apple-framework) and [building an open-source symbolicator](https://www.emergetools.com/blog/posts/symbolicating-swiftui-and-any-apple-framework-part-2)
 
+<center>
+    <img src=".github/images/symbolicate.gif" width="500"/>
+</center>
+
 ## Features
 
 - Symbolicate all crash reports
