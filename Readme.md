@@ -118,7 +118,7 @@ If the required Device x OS x Framework pairing has not been extracted yet:
 3. Extract the shared cache from the IPSW.
    - `ipsw extract --dyld PATH_TO_IPSW`
 4. Install [DyldExtractor](https://github.com/arandomdev/DyldExtractor).
-   - `python3 -m pip install dyldextractor`
+   - `python3 -m pip install git+https://github.com/arandomdev/DyldExtractor#egg=dyldextractor`
 5. Extract your framework.
    - `dyldex -e /System/Library/Frameworks/YOUR_FRAMEWORK.framework/YOUR_FRAMEWORK ./PATH_TO_EXTRACTED_IPSW/dyld_shared_cache_arm64e`
    - Replace YOUR_FRAMEWORK with your framework name
@@ -166,6 +166,7 @@ The linker adddress is `0x00000001800fc000`
 6. Repeat for all the crashes.
 7. Unzip the downloaded files and place the `*.crash` files inside a new folder.
 8. Execute `SymbolsBuilder` binary with the following parameters:
+   - **--csv** (output a .csv file)
    - **--input:** path to the folder containing the crashes.
    - **--output:** path to the folder that will have the symbols file.
    - **--library-name:** name of the Framework.
