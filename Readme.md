@@ -48,6 +48,20 @@ A full list of supported symbols can be found below. All pairings with a ✅ are
 </table>
 </details>
 
+<details>
+<summary><b><font size="+1">iPhone 13 Pro (iPhone 14,2)</font></b></summary>
+<table>
+  <tr>
+    <th>OS Version</th>
+    <th style="text-align: center;">SwiftUI</th> 
+  </tr>
+  <tr>
+    <td>iOS 17.2 (21C62)</td>
+    <td style="text-align: center;"><center>❎</center></td>
+  </tr>
+</table>
+</details>
+
 ## Contributing
 
 This repo provides the tools to generate symbols for any framework. Symbols are generated for Device x OS x Framework pairings in the `Symbols` folder.
