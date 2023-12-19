@@ -22,6 +22,8 @@ You will find available symbols inside the `Symbols` folder. Each folder inside 
 
 A full list of supported symbols can be found below. All pairings with a ✅ are supported in the Emerge Tools' [symbolicator](https://www.emergetools.com/symbolicate).
 
+Symbols marked with ❎ are in this repo, but not supported in the Emerge Tools symbolicator.
+
 <details>
 <summary><b><font size="+1">iPhone SE 2nd Gen (iPhone 12,8)</font></b></summary>
 <table>
