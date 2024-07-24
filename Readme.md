@@ -33,7 +33,7 @@ Symbols marked with ❎ are in this repo, but not supported in the Emerge Tools 
   </tr>
   <tr>
     <td>iOS 17.5.1 (21F90)</td>
-    <td style="text-align: center;"><center>✅</center></td>
+    <td style="text-align: center;"><center>❎</center></td>
   </tr>
 </table>
 </details>
@@ -73,7 +73,7 @@ Symbols marked with ❎ are in this repo, but not supported in the Emerge Tools 
   </tr>
   <tr>
     <td>iOS 17.5.1 (21F90)</td>
-    <td style="text-align: center;"><center>✅</center></td>
+    <td style="text-align: center;"><center>❎</center></td>
   </tr>
 </table>
 </details>
