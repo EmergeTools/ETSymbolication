@@ -25,6 +25,20 @@ A full list of supported symbols can be found below. All pairings with a ✅ are
 Symbols marked with ❎ are in this repo, but not supported in the Emerge Tools symbolicator.
 
 <details>
+<summary><b><font size="+1">iPhone XR (iPhone 11,8)</font></b></summary>
+<table>
+  <tr>
+    <th>OS Version</th>
+    <th style="text-align: center;">SwiftUI</th> 
+  </tr>
+  <tr>
+    <td>iOS 17.5.1 (21F90)</td>
+    <td style="text-align: center;"><center>✅</center></td>
+  </tr>
+</table>
+</details>
+
+<details>
 <summary><b><font size="+1">iPhone SE 2nd Gen (iPhone 12,8)</font></b></summary>
 <table>
   <tr>
@@ -46,6 +60,20 @@ Symbols marked with ❎ are in this repo, but not supported in the Emerge Tools 
   <tr>
     <td>iOS 17.1.1 (21B91)</td>
   <td style="text-align: center;"><center>✅</center></td>
+  </tr>
+</table>
+</details>
+
+<details>
+<summary><b><font size="+1">iPhone 12 (iPhone 13,2)</font></b></summary>
+<table>
+  <tr>
+    <th>OS Version</th>
+    <th style="text-align: center;">SwiftUI</th> 
+  </tr>
+  <tr>
+    <td>iOS 17.5.1 (21F90)</td>
+    <td style="text-align: center;"><center>✅</center></td>
   </tr>
 </table>
 </details>
