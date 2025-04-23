@@ -1,6 +1,9 @@
+> [!WARNING]
+> This is a proof of concept for how to create a database of symbols for Apple frameworks that don’t include debug symbols but are symbolicated in test flight crash reports. Since creating this tool, Apple has started including debug symbols in their frameworks so this is not necessary for the latest OS versions. The code is maintained for reference but not actively updated.
+
 # ETSymbolication
 
-ETSymbolication from [Emerge Tools](https://www.emergetools.com/) enables symbolicating iOS crash reports with symbols from Apple's private frameworks like SwiftUI.
+ETSymbolication from [Emerge Tools](https://www.emergetools.com/) enables symbolicating iOS crash reports with symbols from Apple's frameworks that strip symbols like SwiftUI.
 
 ⭐️ You can use the [free symbolicator](https://www.emergetools.com/symbolicate) to symbolicate crash reports with symbols in this repo
 
