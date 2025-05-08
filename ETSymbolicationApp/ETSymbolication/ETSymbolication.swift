@@ -14,6 +14,7 @@ enum Constants {
     "20F66": 0x0000_0001_8a8b_f000,  // iOS 16.5 - iPhone 14 Pro
     "21B91": 0x0000_0001_8b9e_c000,  // iOS 17.1.1 - iPhone SE
     "21C62": 0x0000_0001_8ba7_b000,  // iOS 17.2 - iPhone 13 Pro
+    "21F90": 0x0000_0001_8c01_c000,  // iOS 17.5.1 - iPhone 12/iPhone XR
 
       // Extracted with otool -l SwiftUI | grep LC_SEGMENT -A8 | grep "segname __TEXT" -A7 | grep vmaddr
       // cmd LC_SEGMENT_64
